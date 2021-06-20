@@ -1,0 +1,17 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class app
+abstract main
+abstract processFile
+
+interface userFileName
+
+main <|-- app
+processFile <|-- main
+
+userFileName <|-- main
+userFileName <|-- processFile
+
+
+@enduml

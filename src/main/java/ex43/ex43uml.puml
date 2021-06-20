@@ -1,0 +1,28 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class app
+abstract main
+abstract generateContent
+abstract getUserInput
+
+interface userName
+interface userAuthor
+interface ynJava
+interface ynCSS
+
+main <|-- app
+getUserInput <|-- main
+generateContent <|-- getUserInput
+
+userName <|-- getUserInput
+userAuthor <|-- getUserInput
+ynJava <|-- getUserInput
+ynCSS <|-- getUserInput
+userName <|-- generateContent
+userAuthor <|-- generateContent
+ynJava <|-- generateContent
+ynCSS <|-- generateContent
+
+
+@enduml

@@ -1,0 +1,24 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class app
+abstract main
+abstract readFile
+abstract sortList
+abstract printList
+abstract saveListToFile
+
+interface ListOfNames
+
+main <|-- app
+readFile <|-- main
+printList <|-- main
+sortList <|-- readFile
+saveListToFile <|-- readFile
+
+ListOfNames <|-- readFile
+ListOfNames <|-- printList
+ListOfNames <|-- sortList
+ListOfNames <|-- saveListToFile
+
+@enduml

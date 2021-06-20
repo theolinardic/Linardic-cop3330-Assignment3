@@ -1,0 +1,18 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class app
+abstract main
+abstract readFile
+abstract processList
+
+interface ListOfNames
+
+main <|-- app
+readFile <|-- main
+processList <|-- readFile
+
+ListOfNames <|-- readFile
+ListOfNames <|-- processList
+
+@enduml

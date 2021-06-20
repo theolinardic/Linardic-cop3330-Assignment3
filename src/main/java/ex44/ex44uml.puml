@@ -1,0 +1,18 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class app
+abstract main
+abstract checkForProduct
+
+interface products
+interface userInputProduct
+
+main <|-- app
+checkForProduct <|-- main
+products <|-- checkForProduct
+userInputProduct <|-- checkForProduct
+userInputProduct <|-- main
+
+
+@enduml
